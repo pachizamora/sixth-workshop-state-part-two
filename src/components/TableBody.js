@@ -1,24 +1,13 @@
-const TableBody = () => {
-  return (
-    <tbody>
-      <tr>
-        <td>Mac</td>
-        <td>Bouncer</td>
+const TableBody = (props) => {
+  const characters = props.characters.map((char, index) => {
+    return (
+      <tr key={index}>
+        <td>{char.name}</td>
+        <td>{char.job}</td>
       </tr>
-      <tr>
-        <td>Dee</td>
-        <td>Aspiring Actress</td>
-      </tr>
-      <tr>
-        <td>Charlie</td>
-        <td>Janitor</td>
-      </tr>
-      <tr>
-        <td>Dennis</td>
-        <td>Bartender</td>
-      </tr>
-    </tbody>
-  );
+    );
+  });
+  return <tbody>{characters}</tbody>;
 };
 
 export default TableBody;
