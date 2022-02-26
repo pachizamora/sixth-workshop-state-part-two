@@ -36,10 +36,7 @@ class App extends React.Component {
     const { characters } = this.state;
     return (
       <div className="container">
-        <Table
-          characterData={characters}
-          removeCharacter={this.removeCharacter}
-        />
+        <Table characters={characters} removeCharacter={this.removeCharacter} />
       </div>
     );
   }
